@@ -1,2 +1,1 @@
-# Trabalho-de-Desoft
-Trabalho de Marcelo e Vitor
+# Trabalho-de-Desoft - Marcelo e Vitor
