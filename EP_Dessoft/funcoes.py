@@ -22,3 +22,6 @@ def define_posicoes (linha, coluna, orientacao, tamanho):
 
 # posicoes = define_posicoes(linha, coluna, orientacao, tamanho)
 # print(posicoes)
+
+# # Q2
+# def preenche_frota (nome_navio,linha,coluna,orientacao,tamanho):
