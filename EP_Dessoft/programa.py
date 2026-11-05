@@ -1,5 +1,5 @@
 from funcoes import posicao_valida, preenche_frota, posiciona_frota, faz_jogada, afundados, monta_tabuleiros
-
+import random
 frota = {}
 
 nomes = ['porta-aviões', 'navio-tanque', 'contratorpedeiro', 'submarino']
@@ -88,8 +88,30 @@ while jogando:
         else:
             posicao_nova = True
 
-    tabuleiro_oponente = faz_jogada(tabuleiro_oponente, linha, coluna)
+# jogar meu ataque no tabuleiro do cara, ai ver se derrubei os 10 dele e se sim, cabar com o jogo
+# se ainda nao, sorteia os ataques do cara,faz a conferencia se a posicao ja foi, quando escolher uma 
+# posicao q dá mostra no terminal pra mim qq ele atacou, ai marca no meu c ele errou ou matou um meu
+# vê se ele acertou todos os meus e se sim F
+
+        tabuleiro_oponente = faz_jogada(tabuleiro_oponente, linha, coluna)
 
     if afundados(frota_oponente, tabuleiro_oponente) == 10:
         print('Parabéns! Você derrubou todos os navios do seu oponente!')
         jogando = False
+
+    else:
+        linha_oponente = random.randint(0, 9)
+        coluna_oponente = random.randint(0, 9)
+
+        while tabuleiro_jogador[linha_oponente][coluna_oponente] == 'X':
+            linha_oponente == random.randint(0, 9)
+            coluna_oponente == random.randint(0, 9)
+
+        print(f'Seu oponente está atacando na linha {linha_oponente} e coluna {coluna_oponente}')
+
+        tabuleiro_jogador = faz_jogada(tabuleiro_jogador, linha_oponente, coluna_oponente)
+
+        if afundados(frota, tabuleiro_jogador) == 10:
+            print('Xi! O oponente derrubou toda a sua frota =(')
+           
+            jogando = False
