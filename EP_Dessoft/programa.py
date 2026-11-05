@@ -88,7 +88,7 @@ while jogando:
         else:
             posicao_nova = True
 
-# jogar meu ataque no tabuleiro do cara, ai ver se derrubei os 10 dele e se sim, cabar com o jogo
+# jogar meu ataque no tabuleiro do cara, ai ver se derrubei os 10 dele e se sim, cabar com o jogo 
 # se ainda nao, sorteia os ataques do cara,faz a conferencia se a posicao ja foi, quando escolher uma 
 # posicao q dá mostra no terminal pra mim qq ele atacou, ai marca no meu c ele errou ou matou um meu
 # vê se ele acertou todos os meus e se sim F
@@ -104,8 +104,8 @@ while jogando:
         coluna_oponente = random.randint(0, 9)
 
         while tabuleiro_jogador[linha_oponente][coluna_oponente] == 'X':
-            linha_oponente == random.randint(0, 9)
-            coluna_oponente == random.randint(0, 9)
+            linha_oponente = random.randint(0, 9)
+            coluna_oponente = random.randint(0, 9)
 
         print(f'Seu oponente está atacando na linha {linha_oponente} e coluna {coluna_oponente}')
 
