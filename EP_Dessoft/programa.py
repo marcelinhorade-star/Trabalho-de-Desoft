@@ -103,7 +103,7 @@ while jogando:
         linha_oponente = random.randint(0, 9)
         coluna_oponente = random.randint(0, 9)
 
-        while tabuleiro_jogador[linha_oponente][coluna_oponente] == 'X':
+        while tabuleiro_jogador[linha_oponente][coluna_oponente] == 'X' or tabuleiro_jogador[linha_oponente][coluna_oponente] == '-':
             linha_oponente = random.randint(0, 9)
             coluna_oponente = random.randint(0, 9)
 
